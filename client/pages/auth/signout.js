@@ -4,15 +4,15 @@ import useRequest from '../../hooks/use-request';
 
 export default () => {
   const { doRequest } = useRequest({
-     url: '/api/users/signout',
-     method: 'post',
-     body: {},
-     onSuccess: () => {
-         Router.push('/');
-     }
+    url: '/api/users/signout',
+    method: 'post',
+    body: {},
+    onSuccess: () => Router.push('/')
   });
+
   useEffect(() => {
-      doRequest();
+    doRequest();
   }, []);
+
   return <div>Signing you out...</div>;
 };
