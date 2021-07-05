@@ -3,3 +3,4 @@
 /client/.next/
 /common/build/
 /common/node_modules/
+/tickets/node_modules/
