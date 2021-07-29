@@ -4,6 +4,7 @@ import mongoose from "mongoose";
 import {Ticket} from "../../models/ticket";
 import {Order} from "../../models/order";
 import {OrderStatus} from "@cygnetops/common";
+import {natsWrapper} from "../../../../tickets/src/nats-wrapper";
 
 it('returns an error if the ticket does not exist', async () => {
     const ticketId = mongoose.Types.ObjectId();
@@ -47,5 +48,3 @@ it('reserves a ticket', async () => {
         })
         .expect(201);
 });
-
-it.todo('emits an order created event');
