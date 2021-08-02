@@ -1,5 +1,5 @@
-import { Publisher, Subjects, TicketCreatedEvent } from "@cygnetops/common";
+import { Publisher, Subjects, TicketCreatedEvent } from '@cygnetops/common';
 
 export class TicketCreatedPublisher extends Publisher<TicketCreatedEvent> {
-    readonly subject = Subjects.TicketCreated;
+  readonly subject = Subjects.TicketCreated;
 }
