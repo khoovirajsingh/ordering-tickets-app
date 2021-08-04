@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: orders-redis-depl
+  name: expiration-redis-depl
 spec:
   replicas: 1
   selector:
@@ -24,7 +24,7 @@ spec:
   selector:
     app: expiration-redis
   ports:
-    - name: redis
+    - name: db
       protocol: TCP
       port: 6379
       targetPort: 6379
